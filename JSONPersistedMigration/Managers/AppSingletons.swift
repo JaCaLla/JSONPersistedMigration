@@ -10,9 +10,12 @@ import Foundation
 @MainActor
 struct AppSingletons {
     var userDefaultsManager: UserDefaultsManagerProtocol
+    var migrationManager: MigrationManagerProtocol
     
-    init(userDefaultsManager: UserDefaultsManager = UserDefaultsManager()) {
+    init(userDefaultsManager: UserDefaultsManager = UserDefaultsManager(),
+         migrationManager: MigrationManagerProtocol = MigrationManager()) {
         self.userDefaultsManager = userDefaultsManager
+        self.migrationManager = migrationManager
     }
 }
 

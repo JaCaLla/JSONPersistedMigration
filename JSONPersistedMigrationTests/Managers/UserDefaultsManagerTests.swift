@@ -20,7 +20,7 @@ extension JSONPersistedMigrationTests {
     func userDefaultsManager() throws {
         let sut = getSut()
         
-        let person = Person(name: "Alice", age: "48")
+        let person = Person(name: "Alice", age: "48", email: "---")
         do {
             try sut.set(person, forKey: UserDefaultsManager.key.person)
         } catch {
@@ -31,6 +31,7 @@ extension JSONPersistedMigrationTests {
         
         #expect(retrievedPerson?.name == "Alice")
         #expect(retrievedPerson?.age == "48")
+        #expect(retrievedPerson?.email == "---")
     }
 }
 

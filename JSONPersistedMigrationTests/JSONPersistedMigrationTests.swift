@@ -10,8 +10,27 @@ import Testing
 
 struct JSONPersistedMigrationTests {
 
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    @Test
+    @MainActor
+    func migrationFromV0ToV1() throws {
+        // Given: When we are in version 0
+                    let userDefaultsManager = UserDefaultsManager()
+        userDefaultsManager.reset()
+        let personV0 = MigrationManager.PersonV0(name: "Peter", age: "55")
+        do {
+            try userDefaultsManager.set(personV0, forKey: UserDefaultsManager.key.person)
+        } catch {
+            #expect(Bool(false))
+        }
+        // When
+        let sut = MigrationManager()
+        sut.applyMigration()
+        
+        let retrievedPerson = userDefaultsManager.get(Person.self, forKey: UserDefaultsManager.key.person)
+        
+        #expect(retrievedPerson?.name == "Peter")
+        #expect(retrievedPerson?.age == "55")
+        #expect(retrievedPerson?.email == "---")
     }
 
 }

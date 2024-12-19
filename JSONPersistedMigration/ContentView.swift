@@ -34,6 +34,7 @@ struct ContentView: View {
         VStack {
             Text("name: \(viewModel.person?.name ?? "")")
             Text("age: \(viewModel.person?.age ?? "")")
+            Text("email:\(viewModel.person?.email ?? "")")
             Button {
                 viewModel.persist()
             } label: {
