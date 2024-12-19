@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		29D3FC942D1489B600BF120B /* DebugSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29D3FC932D1489B600BF120B /* DebugSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		293668A22D1380ED00636F5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D3FC942D1489B600BF120B /* DebugSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = JSONPersistedMigration;
 			packageProductDependencies = (
+				29D3FC932D1489B600BF120B /* DebugSwift */,
 			);
 			productName = JSONPersistedMigration;
 			productReference = 293668912D1380EB00636F5C /* JSONPersistedMigration.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 293668882D1380EA00636F5C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				29D3FC922D1489B600BF120B /* XCRemoteSwiftPackageReference "DebugSwift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 293668922D1380EB00636F5C /* Products */;
 			projectDirPath = "";
@@ -558,6 +567,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29D3FC922D1489B600BF120B /* XCRemoteSwiftPackageReference "DebugSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DebugSwift/DebugSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29D3FC932D1489B600BF120B /* DebugSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29D3FC922D1489B600BF120B /* XCRemoteSwiftPackageReference "DebugSwift" */;
+			productName = DebugSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 293668892D1380EA00636F5C /* Project object */;
 }
