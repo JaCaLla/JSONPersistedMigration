@@ -44,11 +44,6 @@
 			path = JSONPersistedMigrationTests;
 			sourceTree = "<group>";
 		};
-		293668AE2D1380ED00636F5C /* JSONPersistedMigrationUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = JSONPersistedMigrationUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +77,6 @@
 			children = (
 				293668932D1380EB00636F5C /* JSONPersistedMigration */,
 				293668A42D1380ED00636F5C /* JSONPersistedMigrationTests */,
-				293668AE2D1380ED00636F5C /* JSONPersistedMigrationUITests */,
 				293668922D1380EB00636F5C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,9 +152,6 @@
 			);
 			dependencies = (
 				293668AD2D1380ED00636F5C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				293668AE2D1380ED00636F5C /* JSONPersistedMigrationUITests */,
 			);
 			name = JSONPersistedMigrationUITests;
 			packageProductDependencies = (

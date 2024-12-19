@@ -32,7 +32,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("name: \(viewModel.person?.name ?? "")")
+            Text("alias: \(viewModel.person?.alias ?? "")")
             Text("age: \(viewModel.person?.age ?? "")")
             Text("email:\(viewModel.person?.email ?? "")")
             Button {

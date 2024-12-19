@@ -12,7 +12,7 @@ struct JSONPersistedMigrationTests {
 
     @Test
     @MainActor
-    func migrationFromV0ToV1() throws {
+    func migrationFromV0To2() throws {
         // Given: When we are in version 0
                     let userDefaultsManager = UserDefaultsManager()
         userDefaultsManager.reset()
@@ -28,9 +28,34 @@ struct JSONPersistedMigrationTests {
         
         let retrievedPerson = userDefaultsManager.get(Person.self, forKey: UserDefaultsManager.key.person)
         
-        #expect(retrievedPerson?.name == "Peter")
+
+        #expect(retrievedPerson?.alias == "Peter")
         #expect(retrievedPerson?.age == "55")
         #expect(retrievedPerson?.email == "---")
+    }
+    
+    @Test
+    @MainActor
+    func migrationFromV1To2() throws {
+        // Given: When we are in version 0
+                    let userDefaultsManager = UserDefaultsManager()
+        userDefaultsManager.reset()
+        let personV1 = MigrationManager.PersonV1(name: "Peter", age: "55", email: "peter@example.com")
+        do {
+            try userDefaultsManager.set(personV1, forKey: UserDefaultsManager.key.person)
+        } catch {
+            #expect(Bool(false))
+        }
+        // When
+        let sut = MigrationManager()
+        sut.applyMigration()
+        
+        let retrievedPerson = userDefaultsManager.get(Person.self, forKey: UserDefaultsManager.key.person)
+        
+
+        #expect(retrievedPerson?.alias == "Peter")
+        #expect(retrievedPerson?.age == "55")
+        #expect(retrievedPerson?.email == "peter@example.com")
     }
 
 }
