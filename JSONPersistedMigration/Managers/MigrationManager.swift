@@ -26,12 +26,23 @@ final class MigrationManager: ObservableObject {
         var version: Int {
             return 1
         }
+        
         let name: String
         let age: String
         let email: String
     }
     
-    typealias PersonV2 = Person
+    struct PersonV2: Codable {
+        var version: Int {
+            return 2
+        }
+        
+        let alias: String
+        let age: String
+        let email: String
+    }
+    
+    typealias PersonV3 = Person
 }
 
 extension MigrationManager: MigrationManagerProtocol {
@@ -66,7 +77,9 @@ extension MigrationManager: MigrationManagerProtocol {
     
     private func storedPersonVersion() -> Int {
         let userDefaultsManager = appSingletons.userDefaultsManager
-        if let _ = userDefaultsManager.get(PersonV1.self, forKey: UserDefaultsManager.key.person) {
+        if let _ = userDefaultsManager.get(PersonV2.self, forKey: UserDefaultsManager.key.person) {
+            return 2
+        } else if let _ = userDefaultsManager.get(PersonV1.self, forKey: UserDefaultsManager.key.person) {
             return 1
         } else {
             return 0

@@ -9,15 +9,14 @@ import Foundation
 
 struct Person: Codable {
     var version: Int {
-        return 2
+        return 3
     }
     
     let alias: String
-    let age: String
     let email: String
 }
 
 
 extension Person {
-    static let sample = Person(alias: "Pedro", age: "24", email: "pedro.asdt@gmail.com")
+    static let sample = Person(alias: "Pedro", email: "pedro.asdt@gmail.com")
 }

@@ -31,6 +31,7 @@
 		293668912D1380EB00636F5C /* JSONPersistedMigration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONPersistedMigration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		293668A12D1380ED00636F5C /* JSONPersistedMigrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONPersistedMigrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		293668AB2D1380ED00636F5C /* JSONPersistedMigrationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSONPersistedMigrationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D3FCA32D14C9E200BF120B /* JSONPersistedMigration.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = JSONPersistedMigration.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		293668882D1380EA00636F5C = {
 			isa = PBXGroup;
 			children = (
+				29D3FCA32D14C9E200BF120B /* JSONPersistedMigration.xctestplan */,
 				293668932D1380EB00636F5C /* JSONPersistedMigration */,
 				293668A42D1380ED00636F5C /* JSONPersistedMigrationTests */,
 				293668922D1380EB00636F5C /* Products */,

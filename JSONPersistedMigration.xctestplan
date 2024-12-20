@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "5A2267C3-9421-4A1E-8E84-36CB0E985242",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:JSONPersistedMigration.xcodeproj",
+      "identifier" : "293668902D1380EB00636F5C",
+      "name" : "JSONPersistedMigration"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:JSONPersistedMigration.xcodeproj",
+        "identifier" : "293668A02D1380ED00636F5C",
+        "name" : "JSONPersistedMigrationTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:JSONPersistedMigration.xcodeproj",
+        "identifier" : "293668AA2D1380ED00636F5C",
+        "name" : "JSONPersistedMigrationUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
