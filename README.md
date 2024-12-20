@@ -1,6 +1,6 @@
 
 # JSONPersistedMigration
-This repository contains a sample iOS application. The app implements a persisted non-db migration pattern. This is the base code used in following post [Dealing a REST API with Combine](https://javios.eu/blog)
+This repository contains a sample iOS application. The app implements a persisted non-db migration pattern. This is the base code used in following post [Dealing a REST API with Combine](https://javios.eu/swift/safely-migrating-persisted-models-in-ios-to-prevent-crashes/)
 
 
 ## 🎥 Demo Video
