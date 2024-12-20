@@ -6,7 +6,7 @@ This repository contains a sample iOS application. The app implements a persiste
 ## 🎥 Demo Video
 
 Check out the app in action!  
-![CombineAPIRrest Sample App review](media/V0.gif)  
+![CombineAPIRrest Sample App review](media/v0.gif)  
 
 
 ## Requirements
